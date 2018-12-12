@@ -12,7 +12,7 @@ try {
 
     // Set webhook
     //$result = $telegram->setWebhook($hook_url);
-    $result = $telegram->setWebhook($hook_url, ['certificate' => 'cert.pem']);
+    $result = $telegram->setWebhook($hook_url, ['certificate' => './cert.pem']);
     if ($result->isOk()) {
         echo $result->getDescription();
     }

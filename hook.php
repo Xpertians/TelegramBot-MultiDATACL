@@ -10,7 +10,7 @@ $commands_paths = [
 
 try {
     $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
-    $telegram->enableAdmin(61259010);
+    //$telegram->enableAdmin(61259010);
     $telegram->addCommandsPaths($commands_paths);
     $telegram->handle();
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {

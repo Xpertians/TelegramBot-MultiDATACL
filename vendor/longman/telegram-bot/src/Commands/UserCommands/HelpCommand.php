@@ -36,7 +36,7 @@ class HelpCommand extends UserCommand
         $chat_id = $message->getChat()->getId();
 
         $message_id = $message->getMessageId();
-        $command = trim($message->getText(true));
+        $command = $message->getText(true);
 
         //Only get enabled Admin and User commands
         $commands = array_filter($this->telegram->getCommandsList(), function ($command) {

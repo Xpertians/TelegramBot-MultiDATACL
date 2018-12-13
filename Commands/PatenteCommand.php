@@ -102,8 +102,16 @@ class PatenteCommand extends UserCommand{
                 if(array_key_exists('payload', $rst['data'])){
                     $rst    = "";
                     $trans  = array(
-                        'plate' => "PATENTE",
-                        'year'  => "ANO"
+                        'plate'     => "PATENTE",
+                        'year'      => "ANO",
+                        'nmotor'    => "MOTOR",
+                        'vin'       => "VIN",
+                        'brand'     => "MARCA",
+                        'model'     => "MODELO",
+                        'color'     => "COLOR",
+                        'class'     => "TIPO",
+                        'stolen'    => "ROBADO",
+                        'related'   => "PROPIETARIOS"
                         );
                     foreach($rst['data']['payload'] AS $key=>$value){
                         if(is_array($value)){

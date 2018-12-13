@@ -23,6 +23,12 @@
 //Load Config
 require 'config.php';
 require 'awscfg.php';
+
+if(array_key_exists('admins',CFG['telegram'])){
+    if(is_array(CFG['telegram']['admins'])){
+      var_dump(CFG['telegram']['admins']);
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

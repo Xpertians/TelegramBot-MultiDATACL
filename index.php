@@ -68,8 +68,8 @@ require 'awscfg.php';
               <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="/">Home</a></li>
-                  <li><a href="http://opendatacollector.com">APIs</a></li>
-                  <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL/issues/new">Soporte</a></li>
+                  <li><a href="http://opendatacollector.com" target="_blank">APIs</a></li>
+                  <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL/issues/new" target="_blank">Soporte</a></li>
                 </ul>
               </nav>
             </div>
@@ -79,13 +79,13 @@ require 'awscfg.php';
             <h1 class="cover-heading">TelegramBot MultiDATACL</h1>
             <p class="lead">Es un proyecto abierto desarrollado para el equipo de SEBV por Xpertians.<br> Le invitamos a contribuir activamente a nuestro proyecto en GitHub.</p>
             <p class="lead">
-              <a href="https://github.com/Xpertians/TelegramBot-MultiDATACL" class="btn btn-lg btn-default">Ver en GitHub</a>
+              <a href="https://github.com/Xpertians/TelegramBot-MultiDATACL" class="btn btn-lg btn-default" target="_blank">Ver en GitHub</a>
             </p>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Powered by <a href="http://opendatacollector.com">opendatacollector</a>, by <a href="https://xpertians.com">Xpertians</a>.</p>
+              <p>Powered by <a href="http://opendatacollector.com" target="_blank">opendatacollector</a>, by <a href="https://xpertians.com" target="_blank">Xpertians</a>.</p>
             </div>
           </div>
 

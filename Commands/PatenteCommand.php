@@ -36,8 +36,8 @@ class PatenteCommand extends UserCommand{
     protected $version          = '1.1.0';
     
     protected $client_type      = "client_credentials";
-    protected $client_id        = CFG['odc']['client_id'];
-    protected $client_secret    = CFG['odc']['client_secret'];
+    protected $client_id        = CFG['odc']['clientid'];
+    protected $client_secret    = CFG['odc']['clientsecret'];
     protected $token            = "";
     protected $agent            = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.112 Safari/534.30";
     

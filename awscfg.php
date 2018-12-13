@@ -28,16 +28,21 @@ foreach($_SERVER as $sKey=>$sValue){
     $arrCfgKey  = explode('_',str_replace($strKey,'',strtolower($sKey)));
     switch(count($arrCfgKey)){
       case 1:
-        $cfg[$arrCfgKey[0]]                                = $sValue;
+        $cfg[$arrCfgKey[0]]                                               = $sValue;
       break;
       case 2:
-        $cfg[$arrCfgKey[0]][$arrCfgKey[1]]                 = $sValue;
+        $cfg[$arrCfgKey[0]][$arrCfgKey[1]]                                = $sValue;
       break;
       case 3:
-        $cfg[$arrCfgKey[0]][$arrCfgKey[1]][$arrCfgKey[2]]  = $sValue;
+        $cfg[$arrCfgKey[0]][$arrCfgKey[1]][$arrCfgKey[2]]                 = $sValue;
+      break;
+      case 4:
+        $cfg[$arrCfgKey[0]][$arrCfgKey[1]][$arrCfgKey[2]][$arrCfgKey[3]]  = $sValue;
       break;
     }
   }
 }
+
+var_dump($cfg);
 
 define("CFG", $cfg);

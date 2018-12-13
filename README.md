@@ -1,7 +1,5 @@
 # Telegram-MultiDATACL
-Telegram-MultiDATACL
 
+Un Bot de telegram usando el paquete [PHP Telegram Bot](https://github.com/php-telegram-bot)  que ejecuta consultas en [OpenDataCollector](https://opendatacollector.com).
 
-
-$bot_api_key  = '785904207:AAFDR2V8Y-M25Aqx7bRjvxrj0ROPGA65u8I';
-$bot_username = 'multidatacl_bot';
+Desarrollado para los amigos de Autos Robados Chile.

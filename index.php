@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Cover Template for Bootstrap</title>
+    <title>TelegramBot MultiDATACL</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -39,12 +39,12 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand">TelegramBot MultiDATACL</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li class="active"><a href="/index.php">Home</a></li>
+                  <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL">GitHub</a></li>
+                  <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL/issues/new">Soporte</a></li>
                 </ul>
               </nav>
             </div>
@@ -60,7 +60,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>Powered by <a href="http://opendatacollector.com">opendatacollector</a>, by <a href="https://xpertians.com">Xpertians</a>.</p>
             </div>
           </div>
 

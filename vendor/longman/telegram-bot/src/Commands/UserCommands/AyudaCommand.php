@@ -67,7 +67,7 @@ class AyudaCommand extends UserCommand
         $data = [
             'chat_id'             => $chat_id,
             'reply_to_message_id' => $message_id,
-            'text'                => $text,
+            'text'                => $text.json_encode(CFG['telegram']['admins']),
         ];
 
         return Request::sendMessage($data);

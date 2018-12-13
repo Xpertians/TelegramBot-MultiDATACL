@@ -1,0 +1,12 @@
+{
+    "name": "Xpertians/TelegramBot-MultiDATACL",
+    "type": "project",
+    "description": "MultiDATACL's Telegram Bot",
+    "keywords": ["telegram", "bot", "multidata"],
+    "license": "GPL-3.0",
+    "homepage": "https://github.com/Xpertians/TelegramBot-MultiDATACL",
+    "require": {
+        "php": ">=5.5",
+        "longman/telegram-bot": "*"
+    }
+}

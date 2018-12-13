@@ -1,7 +1,5 @@
 # Telegram-MultiDATACL
-Telegram-MultiDATACL
 
-https://github.com/php-telegram-bot/core#instructions
+Un Bot de telegram usando el paquete [PHP Telegram Bot](https://github.com/php-telegram-bot)  que ejecuta consultas en [OpenDataCollector](https://opendatacollector.com).
 
-https://github.com/php-telegram-bot/example-bot
-https://github.com/php-telegram-bot/telegram-bot-manager
+Desarrollado para los amigos de Autos Robados Chile.

@@ -20,13 +20,17 @@
  * @access   public
  */
  
- $cfg   = array();
- 
- //Telegram
- $cfg['telegram']['hook']       = "";
- $cfg['telegram']['apikey']     = "";
- $cfg['telegram']['username']   = "";
- 
- //OpenDataCollector
- $cfg['odc']['client_id']       = "";
- $cfg['odc']['client_secret']   = "";
+$cfg   = array();
+
+//Telegram
+$cfg['telegram']['hook']       = "";
+$cfg['telegram']['apikey']     = "";
+$cfg['telegram']['username']   = "";
+$cfg['telegram']['sslcert']    = "";
+
+//Telegram Admins
+$cfg['telegram']['admins'][0]  = "";
+
+//OpenDataCollector
+$cfg['odc']['client_id']       = "";
+$cfg['odc']['client_secret']   = "";

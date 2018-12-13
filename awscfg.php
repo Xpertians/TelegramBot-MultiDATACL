@@ -39,3 +39,5 @@ foreach($_SERVER as $sKey=>$sValue){
     }
   }
 }
+
+define("CFG", $cfg);

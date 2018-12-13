@@ -1,4 +1,25 @@
 <?php
+/**
+ * Copyright (C) 2018 Oscar Valenzuela B. (oscar.valenzuela.b_AT_gmail.com)
+ *
+ * This file is part of TelegramBot-MultiDATACL a.k.a TBMultiDATACL.
+ * TBMultiDATACL is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * any later version.
+ *
+ * TBMultiDATACL is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with TBMultiDATACL. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @author   Oscar Valenzuela B. <oscar.valenzuela.b_AT_gmail.com>
+ * @access   public
+ */
+ 
 namespace Longman\TelegramBot\Commands\UserCommands;
 
 use Longman\TelegramBot\Commands\UserCommand;
@@ -15,8 +36,8 @@ class PatenteCommand extends UserCommand{
     protected $version          = '1.1.0';
     
     protected $client_type      = "client_credentials";
-    protected $client_id        = "FQyDaVCyTOvCOHRSN5TeR8";
-    protected $client_secret    = "bZhlyXsAuzm9oyb5b4DAx817vbJXdKW5";
+    protected $client_id        = CFG['odc']['client_id'];
+    protected $client_secret    = CFG['odc']['client_secret'];
     protected $token            = "";
     protected $agent            = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/534.30 (KHTML, like Gecko) Chrome/12.0.742.112 Safari/534.30";
     

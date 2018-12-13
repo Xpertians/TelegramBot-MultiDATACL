@@ -19,26 +19,20 @@
  * @author   Oscar Valenzuela B. <oscar.valenzuela.b_AT_gmail.com>
  * @access   public
  */
- 
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/vendor/autoload.php';
-require __DIR__ . '/vendor/autoload.php';
 
-$bot_api_key  = '785904207:AAFDR2V8Y-M25Aqx7bRjvxrj0ROPGA65u8I';
-$bot_username = 'multidatacl_bot';
-$hook_url     = 'https://telegram.opendatacollector.com/hook.php';
+//Load Config
+require __DIR__ . '/vendor/config.php';
+require __DIR__ . '/vendor/awscfg.php';
+
+//Load composer
+require __DIR__ . '/vendor/autoload.php';
 
 try {
-    // Create Telegram API object
-    $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
-
-    // Set webhook
-    //$result = $telegram->setWebhook($hook_url);
-    $result = $telegram->setWebhook($hook_url, './cert.pem');
+    $telegram   = new Longman\TelegramBot\Telegram(CFG['telegram']['apikey'], CFG['telegram']['username']);
+    $result     = $telegram->setWebhook(CFG['telegram']['hook'], CFG['telegram']['sslcert']);
     if ($result->isOk()) {
         echo $result->getDescription();
     }
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
-    // log telegram errors
-    // echo $e->getMessage();
+    echo $e->getMessage();
 }

@@ -91,7 +91,7 @@ class PatenteCommand extends UserCommand{
         $rst                    = json_decode(curl_exec($ch), 1);
         if(array_key_exists('access_token', $rst)){
             //GetPlate Info
-            curl_setopt($ch, CURLOPT_URL, "https://opendatacollector.com/api/exec/1542152652/".trim($plateStr));
+            curl_setopt($ch, CURLOPT_URL, "https://opendatacollector.com/api/exec/1542849342/".trim($plateStr));
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, "access_token=".$rst['access_token']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
@@ -101,6 +101,10 @@ class PatenteCommand extends UserCommand{
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
                     $rst    = "";
+                    $trans  = array(
+                        'plate' => "PATENTE",
+                        'year'  => "ANO"
+                        );
                     foreach($rst['data']['payload'] AS $key=>$value){
                         if(is_array($value)){
                             $rst    .= $key.": ".count($value)."\r\n";

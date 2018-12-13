@@ -46,21 +46,21 @@ class AyudaCommand extends UserCommand
         //If no command parameter is passed, show the list
         if ($command === '') {
             $text = $this->telegram->getBotName() . ' v. ' . $this->telegram->getVersion() . "\n\n";
-            $text .= 'Commands List:' . "\n";
+            $text .= 'Lista de comandos:' . "\n";
             foreach ($commands as $command) {
                 $text .= '/' . $command->getName() . ' - ' . $command->getDescription() . "\n";
             }
 
-            $text .= "\n" . 'For exact command help type: /help <command>';
+            $text .= "\n" . 'Para instrucciones especificas ingrese: /ayuda <comando>';
         } else {
             $command = str_replace('/', '', $command);
             if (isset($commands[$command])) {
                 $command = $commands[$command];
-                $text = 'Command: ' . $command->getName() . ' v' . $command->getVersion() . "\n";
-                $text .= 'Description: ' . $command->getDescription() . "\n";
-                $text .= 'Usage: ' . $command->getUsage();
+                $text = 'Comando: ' . $command->getName() . ' v' . $command->getVersion() . "\n";
+                $text .= 'Descripcion: ' . $command->getDescription() . "\n";
+                $text .= 'Uso: ' . $command->getUsage();
             } else {
-                $text = 'No help available: Command /' . $command . ' not found';
+                $text = 'No hay ayuda disponible para el comando /' . $command . '';
             }
         }
 

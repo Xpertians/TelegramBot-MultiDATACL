@@ -34,15 +34,10 @@ $commands_paths = [
 try {
     $telegram = new Longman\TelegramBot\Telegram(CFG['telegram']['apikey'], CFG['telegram']['username']);
     if(array_key_exists('admins',CFG['telegram'])){
-        if(is_array(CFG['telegram']['admins'])){
-            $adminCFG   = CFG['telegram']['admins'][0];
-        }else{
-            $adminCFG   = CFG['telegram']['admins'];
-        }
-        if(strstr($adminCFG,"|")){
-            $telegram->enableAdmins(explode('|',$adminCFG));
-        }elseif(trim($adminCFG)!=""){
-            $telegram->enableAdmin($adminCFG);
+        if(strstr(CFG['telegram']['admins'],"|")){
+            $telegram->enableAdmins(explode('|',CFG['telegram']['admins']));
+        }elseif(trim(CFG['telegram']['admins'])!=""){
+            $telegram->enableAdmin(CFG['telegram']['admins']);
         }
     }
     $telegram->addCommandsPaths($commands_paths);

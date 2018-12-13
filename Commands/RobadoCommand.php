@@ -32,7 +32,7 @@ class RobadoCommand extends UserCommand{
     
     protected $name             = 'robado';
     protected $description      = 'Verifica si una patente presenta encargo por robo';
-    protected $usage            = '/robado <ABCD00>';
+    protected $usage            = '/robado ABCD00';
     protected $version          = '1.1.0';
     
     protected $client_type      = "client_credentials";
@@ -52,7 +52,7 @@ class RobadoCommand extends UserCommand{
         $data       = [ 'chat_id' => $chat_id ];
         
         if ($text === '') {
-            $text = 'Ingrese una patente valida: /robado <ABCD00>';
+            $text = 'Ingrese una patente valida: /robado ABCD00';
         }elseif(!$this->isPlateValid($text)){
             $text = 'La patente '.preg_replace("/[^A-Za-z0-9 ]/", '',$text).' no es valida';
         } else {

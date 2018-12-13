@@ -32,7 +32,7 @@ class PatenteCommand extends UserCommand{
     
     protected $name             = 'patente';
     protected $description      = 'Busca informacion de una patente';
-    protected $usage            = '/patente <ABCD00>';
+    protected $usage            = '/patente ABCD00';
     protected $version          = '1.1.0';
     
     protected $client_type      = "client_credentials";
@@ -52,7 +52,7 @@ class PatenteCommand extends UserCommand{
         $data       = [ 'chat_id' => $chat_id ];
         
         if ($text === '') {
-            $text = 'Ingrese una patente valida: /patente <ABCD00>';
+            $text = 'Ingrese una patente valida: /patente ABCD00';
         }elseif(!$this->isPlateValid($text)){
             $text = 'La patente '.preg_replace("/[^A-Za-z0-9 ]/", '',$text).' no es valida';
         } else {
@@ -91,7 +91,7 @@ class PatenteCommand extends UserCommand{
         $rst                    = json_decode(curl_exec($ch), 1);
         if(array_key_exists('access_token', $rst)){
             //GetPlate Info
-            curl_setopt($ch, CURLOPT_URL, "https://opendatacollector.com/api/exec/1542849342/".trim($plateStr));
+            curl_setopt($ch, CURLOPT_URL, "https://opendatacollector.com/api/exec/1542152652/".trim($plateStr));
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, "access_token=".$rst['access_token']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));

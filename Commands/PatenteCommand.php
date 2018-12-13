@@ -100,7 +100,8 @@ class PatenteCommand extends UserCommand{
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
-                    $rst    = json_encode($rst['data']['payload']);
+                    $rst    .= "Resultados"."\r\n";
+                    $rst    .= json_encode($rst['data']['payload']);
                     $trans  = array(
                         'plate'     => "PATENTE",
                         'year'      => "ANO",
@@ -113,7 +114,11 @@ class PatenteCommand extends UserCommand{
                         'stolen'    => "ROBADO",
                         'related'   => "PROPIETARIOS"
                         );
-                    $rst    = "Resultados"."\r\n";
+                    if(is_array($rst['data']['payload'])){
+                        $rst    .= "array"."\r\n";
+                    }else{
+                        $rst    .= "not_array"."\r\n";
+                    }
                     /*
                     foreach($rst['data']['payload'] AS $key=>$value){
                         if(is_array($value)){
@@ -123,7 +128,7 @@ class PatenteCommand extends UserCommand{
                         }
                     }
                     */
-                    $rst    = "================="."\r\n";
+                    $rst    .= "================="."\r\n";
                 }else{
                     $rst    = "ERR-1003: Respuesta sin Payload";
                 }

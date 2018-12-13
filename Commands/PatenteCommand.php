@@ -96,23 +96,17 @@ class PatenteCommand extends UserCommand{
             curl_setopt($ch, CURLOPT_POSTFIELDS, "access_token=".$rst['access_token']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
             $rst                    = curl_exec($ch);
-            /*
             $rst                    = json_decode(curl_exec($ch), 1);
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
-                    if(array_key_exists('stolen', $rst['data']['payload'])){
-                        $rst    = "PATENTE: ".trim($plateStr)." - ESTADO: ".$rst['data']['payload']['stolen'];
-                    }else{
-                        $rst    = "ERR-1004: Reporte ROBO no encontrado";
-                    }
+                    $rst    = $rst['data']['payload'];
                 }else{
                     $rst    = "ERR-1003: Respuesta sin Payload";
                 }
             }else{
                 $rst    = "ERR-1002: Respuesta sin datos";
             }
-            */
         }else{
             $rst    = "ERR-1001: Error conectando a OpenDataCollector";
         }

@@ -35,7 +35,7 @@ class StartCommand extends SystemCommand
         $message = $this->getMessage();
 
         $chat_id = $message->getChat()->getId();
-        $text = 'Hi there!' . "\n" . 'Type /help to see all commands!';
+        $text = 'Hola!' . "\n" . 'Ingresa /ayuda para ver todos los comandos!';
 
         $data = [
             'chat_id' => $chat_id,

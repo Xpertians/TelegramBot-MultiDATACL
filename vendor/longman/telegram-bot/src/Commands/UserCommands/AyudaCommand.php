@@ -23,7 +23,7 @@ class AyudaCommand extends UserCommand
      */
     protected $name = 'ayuda';
     protected $description = 'Despliega las opciones disponibles';
-    protected $usage = '/ayuda';
+    protected $usage = '/ayuda o /ayuda <comando>';
     protected $version = '1.0.1';
     /**#@-*/
 

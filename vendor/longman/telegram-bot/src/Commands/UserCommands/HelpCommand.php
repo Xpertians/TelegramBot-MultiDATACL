@@ -22,8 +22,8 @@ class HelpCommand extends UserCommand
      * {@inheritdoc}
      */
     protected $name = 'help';
-    protected $description = 'Show bot commands help';
-    protected $usage = '/help or /help <command>';
+    protected $description = 'Despliega las opciones disponibles';
+    protected $usage = '/ayuda o /ayuda <comando>';
     protected $version = '1.0.1';
     /**#@-*/
 
@@ -51,16 +51,16 @@ class HelpCommand extends UserCommand
                 $text .= '/' . $command->getName() . ' - ' . $command->getDescription() . "\n";
             }
 
-            $text .= "\n" . 'For exact command help type: /help <command>';
+            $text .= "\n" . 'Para instrucciones especificas ingrese: /ayuda <comando>';
         } else {
             $command = str_replace('/', '', $command);
             if (isset($commands[$command])) {
                 $command = $commands[$command];
-                $text = 'Command: ' . $command->getName() . ' v' . $command->getVersion() . "\n";
-                $text .= 'Description: ' . $command->getDescription() . "\n";
-                $text .= 'Usage: ' . $command->getUsage();
+                $text = 'Comando: ' . $command->getName() . ' v' . $command->getVersion() . "\n";
+                $text .= 'Descripcion: ' . $command->getDescription() . "\n";
+                $text .= 'Uso: ' . $command->getUsage();
             } else {
-                $text = 'No help available: Command /' . $command . ' not found';
+                $text = 'No hay ayuda disponible para el comando /' . $command . '';
             }
         }
 

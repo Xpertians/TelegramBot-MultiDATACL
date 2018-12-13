@@ -100,8 +100,6 @@ class PatenteCommand extends UserCommand{
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
-                    $rst    = json_encode($rst['data']['payload']);
-                    /*
                     $rst    = "";
                     $trans  = array(
                         'plate'     => "PATENTE",
@@ -122,7 +120,6 @@ class PatenteCommand extends UserCommand{
                             $rst    .= $key.": ".$value."\r\n";
                         }
                     }
-                    */
                 }else{
                     $rst    = "ERR-1003: Respuesta sin Payload";
                 }

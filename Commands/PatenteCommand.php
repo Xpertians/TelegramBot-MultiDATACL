@@ -100,7 +100,14 @@ class PatenteCommand extends UserCommand{
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
-                    $rst    = $rst['data']['payload'];
+                    $rst    = "";
+                    foreach($rst['data']['payload'] AS $key=>$value){
+                        if(is_array($value)){
+                            $rst    .= $key.": ".count($value)."\r\n";
+                        }else{
+                            $rst    .= $key.": ".$value."\r\n";
+                        }
+                    }
                 }else{
                     $rst    = "ERR-1003: Respuesta sin Payload";
                 }

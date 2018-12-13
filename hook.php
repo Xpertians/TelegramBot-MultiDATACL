@@ -33,28 +33,6 @@ $commands_paths = [
 
 try {
     $telegram = new Longman\TelegramBot\Telegram(CFG['telegram']['apikey'], CFG['telegram']['username']);
-    /*
-    //Weird Apache error bring configs as array->object.
-    if(array_key_exists('admins',CFG['telegram'])){
-        if(is_array(CFG['telegram']['admins'])){
-          $admins = explode('|',CFG['telegram']['admins'][0]);
-        }else{
-          $admins = explode('|',CFG['telegram']['admins']);
-        }
-        $admArr = array();
-        foreach($admins AS $admin){
-          if(trim($admin)!=""){
-            $admArr[] = $admin;
-          }
-        }
-        if(count($admArr)>=2){
-          $telegram->enableAdmins($admArr);
-        }else{
-          $telegram->enableAdmin($admArr[0]);
-        }
-    }
-    */
-    $telegram->enableAdmin(61259010);
     $telegram->addCommandsPaths($commands_paths);
     $telegram->handle();
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {

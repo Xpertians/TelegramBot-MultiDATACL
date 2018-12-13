@@ -21,8 +21,8 @@
  */
 
 //Load Config
-require __DIR__ . '/vendor/config.php';
-require __DIR__ . '/vendor/awscfg.php';
+require 'config.php';
+require 'awscfg.php';
 
 //Load composer
 require __DIR__ . '/vendor/autoload.php';

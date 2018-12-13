@@ -67,8 +67,8 @@ require 'awscfg.php';
               <h3 class="masthead-brand">Principal</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="http://telegram.org">Descargar</a></li>
-                  <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL">GitHub</a></li>
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="http://opendatacollector.com">APIs</a></li>
                   <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL/issues/new">Soporte</a></li>
                 </ul>
               </nav>
@@ -76,10 +76,10 @@ require 'awscfg.php';
           </div>
 
           <div class="inner cover">
-            <h1 class="cover-heading">Cover your page.</h1>
-            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+            <h1 class="cover-heading">TelegramBot MultiDATACL</h1>
+            <p class="lead">Es un proyecto abierto desarrollado para el equipo de SEBV por Xpertians. Le invitamos a contribuir activamente a nuestro proyecto en GitHub.</p>
             <p class="lead">
-              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+              <a href="https://github.com/Xpertians/TelegramBot-MultiDATACL" class="btn btn-lg btn-default">Ver GitHub</a>
             </p>
           </div>
 

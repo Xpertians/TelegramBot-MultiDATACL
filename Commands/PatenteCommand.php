@@ -112,7 +112,8 @@ class PatenteCommand extends UserCommand{
                         'stolen'    => "ROBADO",
                         'related'   => "PROPIETARIOS"
                         );
-                    $rsp    = "Resultados:"."\r\n";
+                    $rsp    = "RESULTADOS:"."\r\n";
+                    $rsp    .= "================="."\r\n";
                     if(is_array( $rst['data']['payload'] )){
                         foreach($rst['data']['payload'] AS $key=>$value){
                             if(array_key_exists($key,$trans)){

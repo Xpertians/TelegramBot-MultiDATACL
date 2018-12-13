@@ -112,7 +112,8 @@ class PatenteCommand extends UserCommand{
                         'stolen'    => "ROBADO",
                         'related'   => "PROPIETARIOS"
                         );
-                    $rst    = "";
+                    $rst    = "Resultados"."\r\n";
+                    /*
                     foreach($rst['data']['payload'] AS $key=>$value){
                         if(is_array($value)){
                             $rst    .= $key.": ".count($value);
@@ -120,6 +121,8 @@ class PatenteCommand extends UserCommand{
                             $rst    .= $key.": ".$value;
                         }
                     }
+                    */
+                    $rst    = "================="."\r\n";
                 }else{
                     $rst    = "ERR-1003: Respuesta sin Payload";
                 }

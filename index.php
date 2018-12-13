@@ -27,6 +27,8 @@ require 'awscfg.php';
 if(array_key_exists('admins',CFG['telegram'])){
     if(is_array(CFG['telegram']['admins'])){
       var_dump(CFG['telegram']['admins']);
+    }else{
+      echo CFG['telegram']['admins'];
     }
 }
 ?>

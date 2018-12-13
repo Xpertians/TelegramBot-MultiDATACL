@@ -64,10 +64,10 @@ require 'awscfg.php';
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">TelegramBot MultiDATACL</h3>
+              <h3 class="masthead-brand">Principal</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="/index.php">Home</a></li>
+                  <li class="active"><a href="http://telegram.org">Descargar</a></li>
                   <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL">GitHub</a></li>
                   <li><a href="https://github.com/Xpertians/TelegramBot-MultiDATACL/issues/new">Soporte</a></li>
                 </ul>

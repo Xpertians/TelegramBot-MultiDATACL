@@ -77,9 +77,9 @@ require 'awscfg.php';
 
           <div class="inner cover">
             <h1 class="cover-heading">TelegramBot MultiDATACL</h1>
-            <p class="lead">Es un proyecto abierto desarrollado para el equipo de SEBV por Xpertians. Le invitamos a contribuir activamente a nuestro proyecto en GitHub.</p>
+            <p class="lead">Es un proyecto abierto desarrollado para el equipo de SEBV por Xpertians.<br> Le invitamos a contribuir activamente a nuestro proyecto en GitHub.</p>
             <p class="lead">
-              <a href="https://github.com/Xpertians/TelegramBot-MultiDATACL" class="btn btn-lg btn-default">Ver GitHub</a>
+              <a href="https://github.com/Xpertians/TelegramBot-MultiDATACL" class="btn btn-lg btn-default">Ver en GitHub</a>
             </p>
           </div>
 

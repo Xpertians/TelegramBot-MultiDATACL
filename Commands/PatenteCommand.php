@@ -115,10 +115,12 @@ class PatenteCommand extends UserCommand{
                     $rsp    = "Resultados:"."\r\n";
                     if(is_array( $rst['data']['payload'] )){
                         foreach($rst['data']['payload'] AS $key=>$value){
-                            if(is_array($value)){
-                                $rsp    .= $key.": ".count($value);
-                            }else{
-                                $rsp    .= $key.": ".$value;
+                            if(array_key_exists($key,$trans)){
+                                if(is_array($value)){
+                                    $rsp    .= $trans[$key].": ".count($value)."\r\n";
+                                }else{
+                                    $rsp    .= $trans[$key].": ".$value."\r\n";
+                                }
                             }
                         }
                     }

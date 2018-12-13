@@ -25,7 +25,7 @@ class WhoamiCommand extends UserCommand
      * {@inheritdoc}
      */
     protected $name = 'whoami';
-    protected $description = 'Show your id, name and username';
+    protected $description = 'Depsliega tu id, nombre y usuario';
     protected $usage = '/whoami';
     protected $version = '1.0.1';
     protected $public = true;

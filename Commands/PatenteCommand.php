@@ -70,11 +70,10 @@ class PatenteCommand extends UserCommand{
         $rst                    = json_decode(curl_exec($ch), 1);
         if(array_key_exists('access_token', $rst)){
             //GetPlate Info
-            $data   = array();
-            $data['access_token']   = $rst['access_token'];
             curl_setopt($ch, CURLOPT_URL, "https://opendatacollector.com/api/exec/1541878145/".trim($plateStr));
             curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, "access_token=".$rst['access_token']);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
             $rst                    = curl_exec($ch);
         }else{
             $rst    = "ERR-1001: Error conectando a OpenDataCollector";

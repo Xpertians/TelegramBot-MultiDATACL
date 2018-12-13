@@ -23,26 +23,6 @@
 //Load Config
 require 'config.php';
 require 'awscfg.php';
-
-//Weird Apache error bring configs as array->object.
-if(array_key_exists('admins',CFG['telegram'])){
-    if(is_array(CFG['telegram']['admins'])){
-      $admins = explode('|',CFG['telegram']['admins'][0]);
-    }else{
-      $admins = explode('|',CFG['telegram']['admins']);
-    }
-    $admArr = array();
-    foreach($admins AS $admin){
-      if(trim($admin)!=""){
-        $admArr[] = $admin;
-      }
-    }
-    if(count($admArr)>=2){
-      echo "multiple";
-    }else{
-      echo "single";
-    }
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

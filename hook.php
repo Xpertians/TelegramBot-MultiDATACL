@@ -35,9 +35,9 @@ try {
     $telegram = new Longman\TelegramBot\Telegram(CFG['telegram']['apikey'], CFG['telegram']['username']);
     if(array_key_exists('admins',CFG['telegram'])){
         if(is_array(CFG['telegram']['admins'])){
-            $adminCFG   = reset(CFG['telegram']['admins']);
+            $adminCFG   = json_decode(json_encode(CFG['telegram']['admins']),1);
         }else{
-            $adminCFG   = (CFG['telegram']['admins']);
+            $adminCFG   = CFG['telegram']['admins'];
         }
         if(strstr($adminCFG,"|")){
             $telegram->enableAdmins(explode('|',$adminCFG));

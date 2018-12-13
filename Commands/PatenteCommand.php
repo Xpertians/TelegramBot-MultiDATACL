@@ -100,7 +100,6 @@ class PatenteCommand extends UserCommand{
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
-                    $rst    = "";
                     $trans  = array(
                         'plate'     => "PATENTE",
                         'year'      => "ANO",
@@ -113,11 +112,12 @@ class PatenteCommand extends UserCommand{
                         'stolen'    => "ROBADO",
                         'related'   => "PROPIETARIOS"
                         );
+                    $rst    = "";
                     foreach($rst['data']['payload'] AS $key=>$value){
                         if(is_array($value)){
-                            $rst    .= $key.": ".count($value)."\r\n";
+                            $rst    .= $key.": ".count($value);
                         }else{
-                            $rst    .= $key.": ".$value."\r\n";
+                            $rst    .= $key.": ".$value;
                         }
                     }
                 }else{

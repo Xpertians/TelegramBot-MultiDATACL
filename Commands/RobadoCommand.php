@@ -79,15 +79,15 @@ class RobadoCommand extends UserCommand{
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
                     if(array_key_exists('stolen', $rst['data']['payload'])){
-                        $rst    = "PATENTE: ".trim($plateStr)." - ESTADO:".$rst['data']['payload']['stolen'];
+                        $rst    = "PATENTE: ".trim($plateStr)." - ESTADO: ".$rst['data']['payload']['stolen'];
                     }else{
-                        $rst    = "ERR-1004: Error conectando a OpenDataCollector";
+                        $rst    = "ERR-1004: Reporte ROBO no encontrado";
                     }
                 }else{
-                    $rst    = "ERR-1003: Error conectando a OpenDataCollector";
+                    $rst    = "ERR-1003: Respuesta sin Payload";
                 }
             }else{
-                $rst    = "ERR-1002: Error conectando a OpenDataCollector";
+                $rst    = "ERR-1002: Respuesta sin datos";
             }
         }else{
             $rst    = "ERR-1001: Error conectando a OpenDataCollector";

@@ -100,8 +100,8 @@ class PatenteCommand extends UserCommand{
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
-                    $rst    = "Resultados"."\r\n";
-                    $rst    .= json_encode($rst['data']['payload']);
+                    //$rst    = "Resultados"."\r\n";
+                    //$rst    .= json_encode($rst['data']['payload']);
                     $trans  = array(
                         'plate'     => "PATENTE",
                         'year'      => "ANO",
@@ -114,7 +114,7 @@ class PatenteCommand extends UserCommand{
                         'stolen'    => "ROBADO",
                         'related'   => "PROPIETARIOS"
                         );
-                    if(is_array( json_decode(json_encode($rst['data']['payload']),1) )){
+                    if(is_array( $rst['data']['payload'] )){
                         $rst    .= "is_array"."\r\n";
                     }else{
                         $rst    .= "not_array"."\r\n";

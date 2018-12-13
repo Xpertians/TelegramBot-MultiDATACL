@@ -76,6 +76,7 @@ class PatenteCommand extends UserCommand{
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
             $rst                    = json_decode(curl_exec($ch), 1);
             if(array_key_exists('data', $rst)){
+                $rst['data']    = reset($rst['data']);
                 if(array_key_exists('payload', $rst['data'])){
                     if(array_key_exists('stolen', $rst['data']['payload'])){
                         $rst    = "PATENTE: ".trim($plateStr)." - ESTADO:".$rst['data']['payload']['stolen'];

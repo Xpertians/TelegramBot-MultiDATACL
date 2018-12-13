@@ -20,13 +20,22 @@
  * @access   public
  */
  
- $cfg   = array();
- 
- //Telegram
- $cfg['telegram']['hook']       = "";
- $cfg['telegram']['apikey']     = "";
- $cfg['telegram']['username']   = "";
- 
- //OpenDataCollector
- $cfg['odc']['client_id']       = "";
- $cfg['odc']['client_secret']   = "";
+//Dynamic CFG
+$strKey =   "tbmultidatacl_";
+
+foreach($_SERVER as $sKey=>$sValue){
+  if(strstr(strtolower($sKey), $strKey)){
+    $arrCfgKey  = explode('_',str_replace($strKey,'',strtolower($sKey)));
+    switch(count($arrCfgKey)){
+      case 1:
+        $cfg[$arrCfgKey[0]]                                = $sValue;
+      break;
+      case 2:
+        $cfg[$arrCfgKey[0]][$arrCfgKey[1]]                 = $sValue;
+      break;
+      case 3:
+        $cfg[$arrCfgKey[0]][$arrCfgKey[1]][$arrCfgKey[2]]  = $sValue;
+      break;
+    }
+  }
+}

@@ -23,7 +23,6 @@
 //Load Config
 require 'config.php';
 require 'awscfg.php';
-var_dump(CFG['telegram']['admins']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

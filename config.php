@@ -29,7 +29,7 @@ $cfg['telegram']['username']    = "";
 $cfg['telegram']['sslcert']     = "";
 
 //Telegram Admins
-$cfg['telegram']['admins'][0]   = "";
+$cfg['telegram']['admins']      = "";
 
 //OpenDataCollector
 $cfg['odc']['clientid']         = "";

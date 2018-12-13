@@ -43,6 +43,4 @@ foreach($_SERVER as $sKey=>$sValue){
   }
 }
 
-var_dump($cfg);
-
 define("CFG", $cfg);

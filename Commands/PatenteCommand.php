@@ -74,6 +74,8 @@ class PatenteCommand extends UserCommand{
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, "access_token=".$rst['access_token']);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+            $rst                    = curl_exec($ch);
+            /*
             $rst                    = json_decode(curl_exec($ch), 1);
             if(array_key_exists('data', $rst)){
                 $rst['data']    = reset($rst['data']);
@@ -89,6 +91,7 @@ class PatenteCommand extends UserCommand{
             }else{
                 $rst    = "ERR-1002: Respuesta sin datos";
             }
+            */
         }else{
             $rst    = "ERR-1001: Error conectando a OpenDataCollector";
         }
